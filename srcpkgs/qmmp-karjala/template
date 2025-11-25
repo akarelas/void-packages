@@ -31,6 +31,7 @@ license="GPL-3.0-or-later"
 homepage="http://qmmp.ylsoftware.com"
 distfiles="http://qmmp.ylsoftware.com/files/qmmp/${version%.*}/qmmp-${version}.tar.bz2"
 checksum=01c3e30367c885178cd115594d20f694a47a352fd7e65fcf5722e12ac8333063
+replaces="qmmp>=0"
 
 #qmmp-devel_package() {
 #    short_desc+=" - development files"
