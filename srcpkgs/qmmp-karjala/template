@@ -1,0 +1,43 @@
+# Template file for 'qmmp-2.3'
+# Written by Alamahant on 24-11-2025
+pkgname=qmmp-karjala
+version=2.3.0
+revision=3
+#pkg_bypass_shlib_check=yes
+#nopkgdep=1
+build_style=cmake
+# Enable Qt6 UI and optional plugins
+configure_args="
+  -DUSE_HAL=OFF
+  -DQMMP_DEFAULT_UI=qt6
+  -DENABLE_PROJECTM=ON
+  -DENABLE_NCURSES_UI=OFF
+  -DENABLE_QT_UI=ON
+"
+hostmakedepends="pkg-config qt6-tools"
+makedepends="
+  enca-devel faad2-devel ffmpeg-devel jack-devel libarchive-devel
+  libbs2b-devel libcdio-paranoia-devel libcurl-devel libgme-devel libmad-devel
+  libmms-devel libmodplug-devel libmpcdec-devel libsamplerate-devel libwildmidi-devel
+  libshout-devel libsidplayfp-devel libsoxr-devel opusfile-devel pulseaudio-devel
+  projectM-devel qt6-multimedia-devel qt6-tools-devel qt6-base-devel taglib-devel
+  wavpack-devel pipewire-devel
+"
+# Runtime dependencies
+depends="qt6-base qt6-multimedia qt6-plugin-sqlite"
+short_desc="Audio player based on the Qt6 libraries (karjala version)"
+maintainer="Orphaned <orphan@voidlinux.org>"
+license="GPL-3.0-or-later"
+homepage="http://qmmp.ylsoftware.com"
+distfiles="http://qmmp.ylsoftware.com/files/qmmp/${version%.*}/qmmp-${version}.tar.bz2"
+checksum=01c3e30367c885178cd115594d20f694a47a352fd7e65fcf5722e12ac8333063
+
+#qmmp-devel_package() {
+#    short_desc+=" - development files"
+#    depends="${sourcepkg}>=${version}_${revision}"
+#    pkg_install() {
+#        vmove usr/include
+#        vmove usr/lib/pkgconfig
+#        vmove usr/lib/*.so
+#    }
+#}
