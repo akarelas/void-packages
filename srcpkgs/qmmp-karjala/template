@@ -44,6 +44,7 @@ homepage="http://qmmp.ylsoftware.com"
 distfiles="http://qmmp.ylsoftware.com/files/qmmp/${version%.*}/qmmp-${version}.tar.bz2"
 checksum=4d8bbae619e99cfd665d96c3688d2d306f5ffc30144e07b37ca701a99e326365
 
+replaces="qmmp<2.3.2"
 
 # # At least one QSql plugin should be available
 # depends="qt5-plugin-sqlite"
