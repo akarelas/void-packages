@@ -2,7 +2,7 @@
 # Written by Alamahant on 24-11-2025
 pkgname=qmmp-karjala
 version=2.3.2
-revision=1
+revision=2
 build_style=cmake
 
 # Enable Qt6 UI and optional plugins
